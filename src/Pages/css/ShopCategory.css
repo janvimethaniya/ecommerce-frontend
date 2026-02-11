@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Arial, sans-serif;
+}
+
+/* Page */
+.contact-page {
+  
+  min-height: 100vh;
+  padding: 150px 15px;
+  margin-left:308px;
+  
+}
+
+/* Heading */
+.contact-page h1 {
+  font-size: 22px;
+  color: #212121;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.contact-page p {
+  font-size: 14px;
+  color: #878787;
+  margin-bottom: 25px;
+}
+
+/* Main container */
+.contact-container {
+  max-width: 900px;
+  background: #ffffff;
+  display: flex;
+  gap: 30px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  border: 1px solid #121111;
+}
+
+/* Form */
+.contact-form {
+  flex: 2;
+}
+
+/* Labels */
+.contact-form label {
+  font-size: 13px;
+  color: #212121;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* Inputs */
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
+  padding: 10px 4px;
+  font-size: 14px;
+  margin-bottom: 22px;
+  outline: none;
+  resize: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom: 2px solid #2874f0;
+}
+
+/* Button */
+.contact-form button {
+  background: #fb641b;
+  color: #ffffff;
+  border: none;
+  padding: 12px 22px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background: #f95d12;
+}
+
+/* Info */
+.contact-info {
+  flex: 1;
+  border-left: 1px solid #f0f0f0;
+  padding-left: 25px;
+}
+
+.contact-info h3 {
+  font-size: 16px;
+  color: #212121;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.contact-info p {
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+  }
+
+  .contact-info {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 20px;
+  }
+}
+
+/* =================== Company & Office Pages (Richer Design) =================== */
+.company-page,
+.office-page {
+  min-height: -10px;
+  padding: 100px;
+  margin: 110px;
+  margin-left: 308px;
+  color: #061844;
+  border: 2px solid black;
+  width: 775px;
+  margin-right: 155px;
+  background-color:#b7d6f6;
+}
+.office-page h1,p{
+  margin-left: 45px;
+}
+.company-page h1,p{
+  margin-left: 45px;
+}
+.office-info{
+  color: #161617;
+}
+
+.company-section{
+  margin-left: 45px;
+}
+
+.page-hero {
+  max-width: 1100px;
+  margin: 0 auto 18px;
+  background: linear-gradient(90deg,#ffffff 0%, #fbfdff 100%);
+  padding: 22px;
+  border-radius: 12px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 8px 30px rgba(12,18,30,0.06);
+}
+
+.hero-text h1 {
+  font-size: 30px;
+  color: #071029;
+  margin: 0 0 6px 0;
+  font-weight: 800;
+}
+
+.hero-text p {
+  color: #475569;
+  font-size: 15px;
+  margin: 0;
+}
+
+.hero-visual {
+  margin-left: auto;
+  width: 220px;
+  height: 120px;
+  background: linear-gradient(135deg,#e6f0ff,#fff7ed);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  color: #0b1220;
+}
+
+/* ===== Animations ===== */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.98); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.page-hero { animation: fadeUp 560ms cubic-bezier(.2,.9,.3,1) both; }
+.hero-visual { animation: popIn 640ms ease both; }
+
+/* company card entrance */
+.company-card { animation: fadeUp 600ms cubic-bezier(.2,.9,.3,1) both; }
+
+/* feature tiles subtle float + stagger */
+.feature-tile {
+  transition: transform 260ms ease, box-shadow 260ms ease;
+  transform-origin: center center;
+  background-size: 200% 200%;
+  background-image: linear-gradient(135deg,#fbfdff 0%, #f0f7ff 100%);
+}
+.feature-tile:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 14px 30px rgba(11,18,34,0.08);
+}
+.feature-tile:nth-child(1) { animation: fadeUp 520ms ease both; }
+.feature-tile:nth-child(2) { animation: fadeUp 640ms ease both; }
+.feature-tile:nth-child(3) { animation: fadeUp 760ms ease both; }
+
+/* contact panel and map */
+.contact-panel { transform-origin: top center; animation: popIn 580ms ease both; }
+.office-map { animation: fadeUp 680ms ease both; }
+
+/* subtle gradient motion for hero visual */
+.hero-visual { background: linear-gradient(135deg,#e6f0ff 0%, #fff7ed 50%, #fff0f0 100%); background-size: 200% 200%; animation: floatGradient 6s ease-in-out infinite; }
+
+/* hover on contact rows */
+.contact-row { transition: background 220ms ease, transform 220ms ease; border-radius: 6px; padding: 6px; }
+.contact-row:hover { background: rgba(11,18,34,0.03); transform: translateX(4px); }
+
+/* responsive tweaks keep animations subtle on small screens */
+@media (max-width: 1000px) {
+  .page-hero { animation-duration: 480ms; }
+  .feature-tile:nth-child(1), .feature-tile:nth-child(2), .feature-tile:nth-child(3) { animation-duration: 520ms; }
+}
+
+.company-layout {
+  max-width: 1100px;
+  margin: 18px auto 0;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 18px;
+}
+
+.company-card {
+  background: #fff;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(12,18,30,0.04);
+  border: 1px solid rgba(12,18,30,0.04);
+}
+
+.company-card h2 { margin-top: 0; color:#071029; font-size:18px }
+.company-card p { color:#475569; line-height:1.7 }
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.feature-tile {
+  background: linear-gradient(180deg,#fbfdff,#f8fbff);
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #eef6ff;
+  text-align: center;
+}
+
+.feature-tile h4 { margin: 6px 0 4px; font-size:14px }
+.feature-tile p { font-size:13px; color:#5b6b7a }
+
+.contact-panel {
+  background: #fff;
+  padding: 18px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(12,18,30,0.04);
+  border: 1px solid rgba(12,18,30,0.04);
+}
+
+.contact-panel h3 { margin:0 0 8px; color:#071029 }
+.contact-row { display:flex; gap:10px; align-items:center; margin-bottom:8px }
+.contact-row strong { min-width:72px; color:#0b1220 }
+
+.office-map {
+  margin-top: 12px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+.office-map iframe { width:100%; height:220px; border:0; display:block }
+
+/* Office variant layout tweaks */
+.office-page .company-layout { grid-template-columns: 1fr 360px }
+
+/* Responsive */
+@media (max-width: 1000px) {
+  .company-layout { grid-template-columns: 1fr; }
+  .page-hero { flex-direction: column; align-items: flex-start }
+  .hero-visual { width:100%; height:140px }
+  .company-page, .office-page { margin-left: 0; padding: 80px 14px }
+}
+
+@media (max-width: 480px) {
+  .feature-grid { grid-template-columns: 1fr 1fr }
+  .feature-tile h4 { font-size:13px }
+  .hero-text h1 { font-size:20px }
+}

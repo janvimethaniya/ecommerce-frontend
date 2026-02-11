@@ -1,0 +1,35 @@
+.item {
+  width: 250px;
+  padding: 10px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.item p {
+  font-size: 16px;
+  margin: 6px 0;
+  font-weight: 500;
+}
+
+.prices {
+  display: flex;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.new {
+  color: #ff3e6c;
+}
+
+.old {
+  color: gray;
+  text-decoration: line-through;
+}
